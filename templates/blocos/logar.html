@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+    <form class="ui form" id="usuario_form" method="post" action="/validacao/">
+        {% csrf_token %}
+    <div class="padrao">
+        <div class="field">
+            <label>Email</label>
+            <div class="ui corner labeled input">
+                {{ form.email }}
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Senha</label>
+            <div class="ui corner labeled input">
+                {{ form.senha }}
+            </div>
+        </div>
+        {% include 'blocos/buttons_form.html' %}
+    </div>
+    </form>
+{% endblock %}

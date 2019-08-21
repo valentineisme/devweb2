@@ -1,0 +1,24 @@
+{% load static %}
+<div class="ui menu">
+        <a class="item" href="/">
+            Inicial
+        </a>
+        <a class="item" href="/sobre/">
+            Sobre
+        </a>
+        {% if user.is_anonymous %}
+            <a class="item" href="/cadastro_usuario/">
+                Cadastrar
+            </a>
+            <a class="item" href="/logar/">
+                Logar
+            </a>
+        {% else %}
+            <a class="item" href="/perfil/">
+                Perfil
+            </a>
+            <a class="item" href="/sair/">
+                Sair
+            </a>
+        {% endif %}
+</div>

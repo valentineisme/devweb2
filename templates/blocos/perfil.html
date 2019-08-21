@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+    {% csrf_token %}
+    <div class="padrao">
+        {{ usuario.nome }} {{ usuario.sobrenome }} <br>
+        {{ usuario.email }}
+    </div>
+{% endblock %}
